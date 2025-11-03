@@ -1,26 +1,30 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #f6f3ef;
+  --color-primary: #bfa58a;
+  --color-secondary: #7a674b;
+  --color-dark: #2e2a26;
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-beige-200: oklch(90.1% 0.076 70.697);
+
+  /* Couleurs pour shadcn/ui */
+  --accent: #bfa58a;
+  --accent-foreground: #ffffff;
+  --muted: #f6f3ef;
+  --muted-foreground: #7a674b;
+  --popover: #ffffff;
+  --popover-foreground: #2e2a26;
+
+  --font-title: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-bg text-dark font-body;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title text-dark;
+  }
 }
