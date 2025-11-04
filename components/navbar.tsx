@@ -19,6 +19,15 @@ export default function CocooningMenu() {
     <div className="flex justify-center self-start pt-6 w-full">
       <NavigationMenu>
         <NavigationMenuList>
+          {/* ✅ Nouveau menu Accueil */}
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <Link href="/" className={navigationMenuTriggerStyle()}>
+                Accueil
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
           {/* Menu Nos collections */}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Nos collections</NavigationMenuTrigger>
@@ -55,32 +64,11 @@ export default function CocooningMenu() {
                 <ListItem href="/chaussettes" title="Chaussettes Douces">
                   Restez au chaud avec nos chaussettes moelleuses pour tous les jours.
                 </ListItem>
-                <ListItem href="/ensembles-lounge" title="Ensembles Lounge">
-                  Pour vos moments détente à la maison, des ensembles confortables et stylés.
+                <ListItem href="/coffrets" title="Coffrets Cadeaux">
+                  Offrez douceur et élégance avec nos coffrets soigneusement conçus.
                 </ListItem>
                 <ListItem href="/accessoires" title="Accessoires Cocooning">
                   Plaids, masques de sommeil et autres indispensables pour le cocooning parfait.
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-
-          {/* Menu Inspiration */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Inspiration</NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-[var(--popover)] text-[var(--popover-foreground)] shadow-lg rounded-lg p-6">
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] list-none">
-                <ListItem href="/guide-confort" title="Guide du confort">
-                  Astuces et conseils pour profiter pleinement de vos moments cocooning.
-                </ListItem>
-                <ListItem href="/tendances" title="Tendances">
-                  Découvrez les tendances pyjamas et chaussettes pour cette saison.
-                </ListItem>
-                <ListItem href="/cadeaux" title="Idées cadeaux">
-                  Offrez douceur et confort avec nos suggestions de cadeaux cocooning.
-                </ListItem>
-                <ListItem href="/blog" title="Blog">
-                  Articles sur le lifestyle cozy, le bien-être et les moments détente.
                 </ListItem>
               </ul>
             </NavigationMenuContent>

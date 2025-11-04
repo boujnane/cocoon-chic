@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { ReactNode } from "react";
 import Navbar from "@/components/navbar";
+import FooterHover from "@/components/FooterHover";
 
 export const metadata = {
   title: "Cocoon Chic",
@@ -21,10 +22,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
 
-        {/* Footer */}
-        <footer className="mt-auto p-6 bg-dark text-bg text-center text-sm md:text-base tracking-wide">
-          © {new Date().getFullYear()} Cocoon Chic — Tous droits réservés.
-        </footer>
+        {/* Footer rétractable */}
+        <FooterHover />
       </body>
     </html>
   );
