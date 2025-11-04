@@ -7,7 +7,7 @@ export default function Home() {
         title="Cocoon Chic"
         subtitle="Découvrez notre sélection d’objets et de textiles qui mêlent douceur, nature et élégance."
         ctaText="Explorer la collection"
-        ctaHref="/collections"
+        ctaHref="/"
         videoUrl="/videos/heroSection4.mp4"
       />
     </>
